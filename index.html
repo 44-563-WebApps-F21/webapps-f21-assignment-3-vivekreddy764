@@ -109,30 +109,31 @@
              he cycle itself can be reconstructed using parent array.
         </q>
         <pre>
+            <code>
             int n;
-vector<vector<int>> adj;
-vector<char> color;
-vector<int> parent;
-int cycle_start, cycle_end;
+            vector<vector<int>> adj;
+            vector<char> color;
+            vector<int> parent;
+            int cycle_start, cycle_end;
 
-bool dfs(int v) {
-    color[v] = 1;
-    for (int u : adj[v]) {
-        if (color[u] == 0) {
+            bool dfs(int v) {
+                color[v] = 1;
+            for (int u : adj[v]) {
+            if (color[u] == 0) {
             parent[u] = v;
             if (dfs(u))
                 return true;
-        } else if (color[u] == 1) {
+            } else if (color[u] == 1) {
             cycle_end = v;
             cycle_start = u;
             return true;
-        }
-    }
-    color[v] = 2;
-    return false;
-}
+            }
+             }
+                color[v] = 2;
+                return false;
+                    }
 
-void find_cycle() {
+           void find_cycle() {
     color.assign(n, 0);
     parent.assign(n, -1);
     cycle_start = -1;
@@ -158,6 +159,7 @@ void find_cycle() {
         cout << endl;
     }
 }
+</code>
  </pre>
         
     </body>
