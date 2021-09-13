@@ -111,9 +111,9 @@
         <pre>
             <code>
             int n;
-            vector<vector<int>> adj;
-            vector<char> color;
-            vector<int> parent;
+            vector(vector(int)) adj;
+            vector(char) color;
+            vector(int) parent;
             int cycle_start, cycle_end;
 
             bool dfs(int v) {
@@ -146,7 +146,7 @@
     if (cycle_start == -1) {
         cout << "Acyclic" << endl;
     } else {
-        vector<int> cycle;
+        vector(int) cycle;
         cycle.push_back(cycle_start);
         for (int v = cycle_end; v != cycle_start; v = parent[v])
             cycle.push_back(v);
