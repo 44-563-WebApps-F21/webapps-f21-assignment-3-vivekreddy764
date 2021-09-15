@@ -108,10 +108,15 @@
 
         <h2>Code display</h2>
         <h4>Algorithm</h4>
-        <blockquote>The Prüfer code is a way of encoding a labeled tree with n vertices using a sequence of n−2 integers in the interval [0;n−1]. 
-            This encoding also acts as a bijection between all spanning trees of a complete graph and the numerical sequences.
-            Although using the Prüfer code for storing and operating on tree is impractical due the specification of the representation, the Prüfer codes are used frequently: mostly in solving combinatorial problems.
-            The inventor - Heinz Prüfer - proposed this code in 1918 as a proof for Cayley's formula.
+        <blockquote> <b>What is Prufer Code?</b><br> 
+            Given a tree (represented as graph, not as a rooted tree) with n labeled nodes with labels from 1 to n, a Prufer code uniquely idetifies the tree. 
+            The sequence has n-2 values.<br> 
+            <br>
+            <b>How to get Prufer Code of a tree?</b>
+            Initialize Prufer code as empty.
+            Start with a leaf of lowest label say x. Find the vertex connecting it to the rest of tree say y. 
+            Remove x from the tree and add y to the Prufer Code
+            Repeat above step 2 until we are left with two nodes.
         </blockquote>
         <a href="https://tinyurl.com/WEBA03" target="_blank">Quick Link</a> <br>
         
